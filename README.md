@@ -134,8 +134,6 @@ Execute the commands in the files respectively beginning with schema.sql, then d
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
 - [ ] **[Add more tables to the vet clinic database]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
