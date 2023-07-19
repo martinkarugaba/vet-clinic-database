@@ -54,7 +54,7 @@ After you're finished please remove all the comments and instructions!
 
 <details>
   <ul>
-    <li><a href="https://reactjs.org/">postreSQL</a></li>
+    <li><a href="https://www.postgresql.org/">postreSQL</a></li>
   </ul>
 </details>
 
@@ -135,6 +135,7 @@ Execute the commands in the files respectively beginning with schema.sql, then d
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **[Add more tables to the vet clinic database]**
+- [ ] Add more tables and create relations between these tables
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
