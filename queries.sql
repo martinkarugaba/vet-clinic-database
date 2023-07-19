@@ -1,4 +1,5 @@
--- Day 1
+-- DAY 1 --
+-----------
 
 SELECT * FROM animals WHERE name LIKE '%mon';
 
@@ -16,9 +17,13 @@ SELECT * FROM animals WHERE NOT (name = 'Gabumon');
 
 SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
 
---Day 2
+----------
+--DAY 2 --
+----------
 
 -- No. 1
+
+ALTER TABLE animals ADD COLUMN species VARCHAR(255);
 
 BEGIN;
 
