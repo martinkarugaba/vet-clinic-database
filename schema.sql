@@ -24,4 +24,28 @@ CREATE TABLE animals (
     owner_id INTEGER REFERENCES owners(id)
 );
 
+--Day 4
+
+CREATE TABLE vets (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR,
+    age INTEGER,
+    date_of_graduation DATE
+);
+
+CREATE TABLE specializations (
+    vet_id INTEGER REFERENCES vets(id),
+    species_id INTEGER REFERENCES species(id),
+    PRIMARY KEY (vet_id, species_id)
+);
+
+CREATE TABLE visits (
+    visit_id SERIAL PRIMARY KEY,
+    animal_id INTEGER REFERENCES animals(id),
+    vet_id INTEGER REFERENCES vets(id),
+    visit_date DATE
+);
+
+
+
 
