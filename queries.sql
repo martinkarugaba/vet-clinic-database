@@ -107,24 +107,12 @@ GROUP BY species;
 --DAY 3
 ------------------------------------------------------
 
-ALTER TABLE animals DROP CONSTRAINT animals_pkey;
-
-ALTER TABLE animals ADD COLUMN id SERIAL PRIMARY KEY;
-
-ALTER TABLE animals DROP COLUMN species;
-
-ALTER TABLE animals ADD COLUMN species_id INTEGER REFERENCES species(id);
-
-ALTER TABLE animals ADD COLUMN owner_id INTEGER REFERENCES owners(id);
-
--- Update the "species_id" based on the animal's name
 UPDATE animals
 SET species_id = CASE
     WHEN name LIKE '%mon' THEN (SELECT id FROM species WHERE name = 'Digimon')
     ELSE (SELECT id FROM species WHERE name = 'Pokemon')
 END;
 
--- Update the "owner_id" based on the animal's name and owner's name
 UPDATE animals
 SET owner_id = (
     CASE
