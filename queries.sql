@@ -224,15 +224,14 @@ LEFT JOIN specializations ON vets.id = specializations.vet_id AND animals.specie
 WHERE specializations.species_id IS NULL;
 
 SELECT species.name AS specialty
-FROM specializations
-JOIN vets ON specializations.vet_id = vets.id
-JOIN visits ON vets.id = visits.vet_id
-JOIN animals ON visits.animal_id = animals.id
-JOIN species ON specializations.species_id = species.id
-WHERE vets.name = 'Maisy Smith'
+FROM species
+JOIN animals ON species.id = animals.species_id
+JOIN owners ON animals.owner_id = owners.id
+WHERE owners.full_name = 'Maisy Smith'
 GROUP BY species.name
-ORDER BY COUNT(visits.vet_id) DESC
+ORDER BY COUNT(animals.id) DESC
 LIMIT 1;
+
 
 
 
