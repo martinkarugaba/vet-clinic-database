@@ -47,6 +47,8 @@ After you're finished please remove all the comments and instructions!
 
 **[vet_clinic_database]** is a postgresql database that contains a table with a title animals. This table contains records of animals including name, date_of_birth, escape attempts, neutered and weight. 
 
+## Schema diagram
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
